@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import TrustSection from './components/TrustSection';
+import AILab from './components/AILab';
 import Features from './components/Features';
 import DemoScanner from './components/DemoScanner';
 import Methodology from './components/Methodology';
@@ -31,18 +33,29 @@ const App: React.FC = () => {
       
       <main>
         <Hero />
+        
+        <TrustSection />
+
+        <section id="ai-lab" className="py-24 px-4 bg-slate-950/30">
+          <AILab />
+        </section>
+
         <section id="demo" className="py-24 px-4 bg-slate-950/50">
           <DemoScanner />
         </section>
+
         <section id="features" className="py-24 px-4">
           <Features />
         </section>
+
         <section id="methodology" className="py-24 px-4 bg-slate-950/50">
           <Methodology />
         </section>
+
         <section id="privacy" className="py-24 px-4">
           <Privacy />
         </section>
+        
         <CTA />
       </main>
 

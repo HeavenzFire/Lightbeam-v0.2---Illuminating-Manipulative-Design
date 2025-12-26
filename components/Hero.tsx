@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ChevronRight, ArrowRight, MousePointer2, AlertCircle } from 'lucide-react';
+import { ArrowRight, BookOpen, Github } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -26,17 +26,21 @@ const Hero: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
-          <button className="flex items-center justify-center gap-2 bg-amber-500 text-slate-950 px-8 py-4 rounded-full text-lg font-bold hover:bg-amber-400 transition-all glow-amber transform hover:-translate-y-1">
-            Install on Chrome <ArrowRight className="w-5 h-5" />
+          <button className="flex items-center justify-center gap-2 bg-amber-500 text-slate-950 px-8 py-4 rounded-full text-lg font-bold hover:bg-amber-400 transition-all shadow-[0_0_20px_rgba(245,158,11,0.3)] transform hover:-translate-y-1">
+            Install Extension <ArrowRight className="w-5 h-5" />
           </button>
-          <button className="flex items-center justify-center gap-2 bg-slate-800 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-slate-700 transition-all border border-slate-700">
-            View Source on GitHub
+          <button className="flex items-center justify-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-slate-800 transition-all border border-slate-800 group">
+            <BookOpen className="w-5 h-5 text-amber-500 group-hover:scale-110 transition-transform" />
+            Read Methodology
+          </button>
+          <button className="flex items-center justify-center gap-2 text-slate-500 hover:text-white px-6 py-4 rounded-full text-sm font-bold transition-all">
+            <Github className="w-4 h-4" /> View Source
           </button>
         </div>
 
         {/* Visual Mockup Overlay */}
         <div className="w-full max-w-5xl relative mt-8">
-          <div className="absolute inset-0 bg-amber-500/10 rounded-2xl blur-3xl -z-10" />
+          <div className="absolute inset-0 bg-amber-500/5 rounded-2xl blur-3xl -z-10" />
           <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
             {/* Browser Header */}
             <div className="bg-slate-800/50 px-4 py-3 flex items-center gap-2 border-b border-slate-800">
@@ -46,30 +50,27 @@ const Hero: React.FC = () => {
                 <div className="w-3 h-3 rounded-full bg-green-500/50" />
               </div>
               <div className="flex-1 bg-slate-950/50 rounded h-6 mx-4 border border-slate-700 flex items-center px-3 text-[10px] text-slate-500 font-mono">
-                https://social-network.com/feed
+                https://social-platform.com/feed
               </div>
             </div>
             
-            {/* Visualizing manipulation demo placeholder */}
             <div className="p-8 grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4 text-left">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-red-500/10 text-red-400 text-xs font-bold border border-red-500/20">
-                  <AlertCircle className="w-3 h-3" /> EXPOSING MANIPULATION
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 text-amber-500 text-xs font-bold border border-amber-500/20">
+                   REAL-TIME ANALYSIS
                 </div>
                 <h3 className="text-2xl font-bold text-white">The "Engagement" Ledger</h3>
                 <p className="text-slate-400">
-                  We don't just block ads. We highlight the infinite scroll traps, 
-                  hidden "cancel" buttons, and AI-driven recommendation hooks 
-                  designed to keep you scrolling against your will.
+                  Observe the invisible infrastructure of the attention economy. Lightbeam monitors DOM mutations to reveal when you're being nudged.
                 </p>
                 <div className="grid grid-cols-2 gap-4 pt-4">
                   <div className="p-4 bg-slate-950/50 rounded-xl border border-slate-800">
-                    <div className="text-amber-500 font-bold text-2xl mb-1">2,412</div>
-                    <div className="text-slate-500 text-xs uppercase tracking-wider font-semibold">Traps Disarmed</div>
+                    <div className="text-amber-500 font-bold text-2xl mb-1">12</div>
+                    <div className="text-slate-500 text-[10px] uppercase tracking-wider font-semibold">Active Nudges</div>
                   </div>
                   <div className="p-4 bg-slate-950/50 rounded-xl border border-slate-800">
-                    <div className="text-amber-500 font-bold text-2xl mb-1">4.2hr</div>
-                    <div className="text-slate-500 text-xs uppercase tracking-wider font-semibold">Attention Saved</div>
+                    <div className="text-amber-500 font-bold text-2xl mb-1">82%</div>
+                    <div className="text-slate-500 text-[10px] uppercase tracking-wider font-semibold">Algorithmic Load</div>
                   </div>
                 </div>
               </div>
@@ -87,9 +88,8 @@ const Hero: React.FC = () => {
                      </div>
                      <div className="flex-1 h-3 bg-slate-800 rounded animate-pulse" />
                    </div>
-                   {/* Tooltip Overlay */}
-                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 p-3 rounded-lg text-xs font-bold shadow-xl border border-white/20 animate-bounce">
-                     Detected: Infinite Scroll Hook
+                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 p-3 rounded-lg text-xs font-bold shadow-xl border border-white/20">
+                     Pattern: Infinite Scroll Loop
                    </div>
                 </div>
               </div>
