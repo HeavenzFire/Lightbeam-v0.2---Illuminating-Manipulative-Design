@@ -29,8 +29,8 @@ const TrustSection: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-24">
-      <div className="grid lg:grid-cols-12 gap-12 items-start">
-        <div className="lg:col-span-8 bg-slate-900/50 border border-slate-800 rounded-3xl p-8 md:p-12 relative overflow-hidden h-full">
+      <div className="grid lg:grid-cols-12 gap-12 items-stretch">
+        <div className="lg:col-span-8 bg-slate-900/50 border border-slate-800 rounded-3xl p-8 md:p-12 relative overflow-hidden flex flex-col justify-center">
           <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl -z-10" />
           
           <h2 className="text-3xl font-bold text-white mb-4">Boundary of Operation</h2>
@@ -53,22 +53,27 @@ const TrustSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="lg:col-span-4 bg-slate-950 border border-slate-800 rounded-3xl p-8 h-full flex flex-col justify-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-red-500/10 text-red-400 text-[10px] font-bold border border-red-500/20 uppercase tracking-widest mb-6 w-fit">
+        <div className="lg:col-span-4 bg-slate-950 border border-slate-800 rounded-3xl p-8 flex flex-col justify-center relative shadow-lg">
+          <div className="absolute inset-0 bg-red-500/5 rounded-3xl pointer-events-none" />
+          
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-red-500/10 text-red-400 text-[10px] font-bold border border-red-500/20 uppercase tracking-widest mb-6 w-fit relative z-10">
             Strict Non-Action List
           </div>
-          <h3 className="text-xl font-bold text-white mb-6">What Lightbeam Does NOT Do</h3>
-          <ul className="space-y-4">
+          
+          <h3 className="text-xl font-bold text-white mb-6 relative z-10">What Lightbeam Does <span className="text-red-400">NOT</span> Do</h3>
+          
+          <ul className="space-y-4 relative z-10">
             {negativeConstraints.map((item, idx) => (
-              <li key={idx} className="flex items-start gap-3">
-                <XCircle className="w-5 h-5 text-red-500/50 shrink-0 mt-0.5" />
-                <span className="text-slate-300 text-sm font-medium">{item}</span>
+              <li key={idx} className="flex items-start gap-3 group">
+                <XCircle className="w-5 h-5 text-red-500/50 shrink-0 mt-0.5 group-hover:text-red-500 transition-colors" />
+                <span className="text-slate-300 text-sm font-medium group-hover:text-white transition-colors">{item}</span>
               </li>
             ))}
           </ul>
-          <div className="mt-8 p-4 bg-slate-900/50 rounded-xl border border-slate-800">
+          
+          <div className="mt-8 p-4 bg-slate-900 rounded-xl border border-dashed border-slate-800 relative z-10">
             <p className="text-[11px] text-slate-500 italic leading-relaxed">
-              "Most transparency tools eventually succumb to 'feature creep' that compromises user trust. Lightbeam is mathematically constrained to observation only."
+              "Most transparency tools eventually succumb to 'feature creep'. Lightbeam is mathematically constrained to observation only."
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shield, Sparkles } from 'lucide-react';
+import { Shield, Sparkles, Lock } from 'lucide-react';
 
 interface HeaderProps {
   scrolled: boolean;
@@ -24,9 +24,12 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
           <a href="#features" className="hover:text-amber-400 transition-colors">Features</a>
           <a href="#demo" className="hover:text-amber-400 transition-colors">Live Demo</a>
+          <a href="#trust" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
+            <Lock className="w-3 h-3" /> Trust
+          </a>
           <a href="#methodology" className="hover:text-amber-400 transition-colors">Methodology</a>
           <a href="#privacy" className="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-            <Shield className="w-4 h-4" /> Privacy
+            <Shield className="w-3 h-3" /> Privacy
           </a>
         </nav>
 

@@ -34,7 +34,9 @@ const App: React.FC = () => {
       <main>
         <Hero />
         
-        <TrustSection />
+        <section id="trust">
+          <TrustSection />
+        </section>
 
         <section id="ai-lab" className="py-24 px-4 bg-slate-950/30">
           <AILab />
